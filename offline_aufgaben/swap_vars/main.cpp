@@ -20,7 +20,8 @@ int main() {
     cout << "Zweite Zahl nachher: " << secondInt << endl;
     cout << "Bitte geben Sie den ersten String ein: ? ";
     getline(cin, firstString);
-    //cin.ignore();
+    // cin.ignore();
+    // NEED CIN.IGNORE() ?
     cout << "Bitte geben Sie den zweiten String ein: ? ";
     getline(cin, secondString);
     swap_vars(firstString,secondString);
