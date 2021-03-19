@@ -5,12 +5,16 @@
 #include <iostream>
 #define CATCH_CONFIG_RUNNER
 #include "catch.hpp"
-#include "rechnung_erstellen.h"
+// !ACHTUNG
+//#include "rechnung_erstellen.h"
 using namespace std;
+
+// !ACHTUNG
+extern unsigned int rechnungErstellen(unsigned int auftragssummer);
 
 int main() {
     int result = Catch::Session().run();
-    int auftragsumme = 0;
+    unsigned int auftragsumme = 0;
     do {
         cout << "Bitte geben Sie die Auftragssumme ein: ? ";
         cin >> auftragsumme;
