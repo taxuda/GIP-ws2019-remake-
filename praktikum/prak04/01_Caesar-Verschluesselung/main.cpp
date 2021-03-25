@@ -11,13 +11,11 @@ bool isBuchstabe(char zeichen){
 
 char verschieben(char buchstabe, unsigned anzahlVerschiebenPosition){
 
-    char neuBuchstabe = buchstabe + anzahlVerschiebenPosition;
-
-    if(!isBuchstabe(neuBuchstabe)){
-        neuBuchstabe -= ALPHABET_SIZE;
+    if(!isBuchstabe(buchstabe + anzahlVerschiebenPosition)){
+        return buchstabe + anzahlVerschiebenPosition - ALPHABET_SIZE;
     }
 
-    return neuBuchstabe;
+    return buchstabe + anzahlVerschiebenPosition;
 }
 
 int main() {
@@ -37,7 +35,6 @@ int main() {
 
     // Verschluesselung..
     for(unsigned i = 0; i >= 0 && i <= s.size() - 1; i++){
-
         char zeichen = s[i];
 
         if(isBuchstabe(zeichen))
