@@ -321,7 +321,8 @@ string umwandlung(string & s){
         }else if(isZahlziffern(s[i])){
             result += '.';
         }else if(s[i] == '!' || s[i] == '?'){
-            result += "";
+            //result += "";
+            continue;
         }else if(s[i] == ' '){
             result += '_';
         }else{
