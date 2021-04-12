@@ -17,16 +17,15 @@ int main()
 	TListenKnoten *anker = nullptr;
 
 	cout << liste_als_string(anker) << endl;
-	// cout << liste_als_string_rueckwaerts(anker) << endl; // neu Aufgabe INF-07.02
+	cout << liste_als_string_rueckwaerts(anker) << endl; // neu Aufgabe INF-07.02
 
 	for (int i = 0; i < laenge; i++)
 		hinten_anfuegen(anker, i*i);
 
 	cout << liste_als_string(anker) << endl;
-	// cout << liste_als_string_rueckwaerts(anker) << endl; // neu Aufgabe INF-07.02
+	cout << liste_als_string_rueckwaerts(anker) << endl; // neu Aufgabe INF-07.02
 
 	// Neu Aufgabe INF-07.03 ...
-	/*
 	in_liste_einfuegen(anker, 11, 0); // neu
 	cout << liste_als_string(anker) << endl; // neu
 	cout << liste_als_string_rueckwaerts(anker) << endl; // neu
@@ -42,10 +41,10 @@ int main()
 	in_liste_einfuegen(anker, 44, 99); // neu
 	cout << liste_als_string(anker) << endl; // neu
 	cout << liste_als_string_rueckwaerts(anker) << endl; // neu
-	*/
+
 
 	// Neu Aufgabe INF-07.04 ...
-	/*
+
 	aus_liste_loeschen(anker, 11); // neu
 	cout << liste_als_string(anker) << endl; // neu
 	cout << liste_als_string_rueckwaerts(anker) << endl; // neu
@@ -61,7 +60,7 @@ int main()
 	aus_liste_loeschen(anker, 44); // neu
 	cout << liste_als_string(anker) << endl; // neu
 	cout << liste_als_string_rueckwaerts(anker) << endl; // neu
-	*/
+
 
 	return 0;
 }
