@@ -4,6 +4,7 @@
 using namespace std;
 
 int main() {
+    // get line from personendaten.txt
     string input_line;
     fstream person_data("/Users/dattran/Desktop/projects/gip(ws2019)/praktikum/prak09/01_html_fstream/personendaten.txt", ios::in);
     if(person_data.fail())
@@ -25,13 +26,24 @@ int main() {
         person_data.close();
     }
 
-    string old_html_page, new_html_page;
+    // getline from webseite.html.tmpl
+    // write neu page to webseite.html
     fstream old_page("/Users/dattran/Desktop/projects/gip(ws2019)/praktikum/prak09/01_html_fstream/webseite.html.tmpl", ios::in);
-    fstream new_page("webseite.html", ios::out);
+    fstream new_page("/Users/dattran/Desktop/projects/gip(ws2019)/praktikum/prak09/01_html_fstream/webseite.html", ios::out);
     string line;
+    string page;
+
     while(getline(old_page, line)){
-        old_html_page += line;
+        line = trimm(line);
+        page += line + '\n';
     };
-    cout << old_html_page;
+
+    page = replace(page, '%', short_text);
+    page = replace(page, '$', long_text);
+    new_page << page;
+
+    old_page.close();
+    new_page.close();
+
     return 0;
 }
