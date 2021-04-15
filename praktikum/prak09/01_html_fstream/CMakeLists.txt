@@ -3,4 +3,4 @@ project(01_html_fstream)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(01_html_fstream main.cpp)
+add_executable(01_html_fstream main.cpp person.h person.cpp text.h text.cpp)
