@@ -63,3 +63,7 @@ std::ostream& operator<<(std::ostream& stream, const Adress& adr){
     return stream << adr.name << std::endl << adr.street << std::endl << adr.city << std::endl << adr.land;
     //return stream;
 }
+
+std::string Adress::to_string()const{
+    return name + "\n" + street + "\n" + city + "\n" + land;
+}

@@ -39,6 +39,8 @@ public:
 
     bool scan();
 
+    std::string to_string()const;
+
     friend std::ostream& operator<<(std::ostream& stream, const Adress &adr);
 };
 

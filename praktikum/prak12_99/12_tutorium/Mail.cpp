@@ -72,3 +72,10 @@ std::ostream& operator << (std::ostream& stream, const Mail &mail){
                     << "Empfaenger:" << std::endl <<  mail.getTo() << std::endl
                     << status;
 }
+
+std::string Mail::delivery_text() const{
+    if(delivered)
+        return "Ausgeliefert an " + to.getName() + ".";
+    else
+        return "Noch nicht ausgeliefert!";
+}

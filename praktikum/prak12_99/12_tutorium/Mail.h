@@ -7,7 +7,7 @@
 #include "Adress.h"
 
 class Mail {
-private:
+protected:
     int id;
     Adress from, to;
     bool delivered;
@@ -39,6 +39,8 @@ public:
     bool scan_from();
 
     bool scan_to();
+
+    virtual std::string delivery_text() const;
 };
 
 std::ostream& operator << (std::ostream& stream, const Mail &mail);
